@@ -27,6 +27,10 @@ pnpm render:cover
 
 Exports default to 4K through `remotion.config.ts`; compositions retain a 1920 × 1080 layout canvas and render at 2× scale. Exports are written to ignored `out/`. To reduce memory use, run `pnpm render --concurrency=4`. The checked-in `exports/` files are the shareable film and cover; regenerate and replace them after editing.
 
+## Production lessons
+
+[Lessons from a first AI-assisted promotional video](docs/production-lessons.md) covers creative decisions, feedback, pacing, subtitles, and a repeatable workflow for future films.
+
 ## Edit
 
 | File | Purpose |
@@ -35,12 +39,11 @@ Exports default to 4K through `remotion.config.ts`; compositions retain a 1920 �
 | `src/TokenerReveal.tsx` | Brand reveal and model lineup |
 | `src/TokenerCover.tsx` | Cover and opening overlay |
 | `src/Root.tsx` | Composition dimensions, durations and font loading |
-| `src/Composition.tsx` | Standalone intro composition |
 | `public/` | Assets referenced by compositions |
 | `IFCon-Langenius-Tokener-01-no-subtitle.mov` | Original full-length, full-frame recording |
 | `.agents/skills/` | Remotion authoring guidance; not needed to render |
 
-Timeline positions and durations use frames at 30 fps. Footage offsets use seconds. The 1.5-second cover overlays the opening, so it does not extend the film. Additional compositions are **TokenerIntro** (5 seconds), **TokenerReveal** (22 seconds), and **TokenerCover** (still).
+Timeline positions and durations use frames at 30 fps. Footage offsets use seconds. The 1.5-second cover overlays the opening, so it does not extend the film. Studio contains **TokenerFilm**, **TokenerFilmSubtitled**, and **TokenerCover** (still).
 
 The render footage removes 180 pixels from the top of the 3840 × 2160 recording, retaining the bottom product navigation. The original recording is included unchanged. The owner confirmed that the displayed API key is a dummy demonstration value. Demo account and usage information remain visible.
 

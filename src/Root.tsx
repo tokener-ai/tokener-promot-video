@@ -1,8 +1,6 @@
 import "./index.css";
 import { Composition, Still, staticFile } from "remotion";
 import { loadFont } from "@remotion/fonts";
-import { TokenerIntro } from "./Composition";
-import { TokenerReveal } from "./TokenerReveal";
 import { TokenerFilm } from "./TokenerFilm";
 import { TokenerCover } from "./TokenerCover";
 
@@ -19,21 +17,5 @@ export const RemotionRoot = () => (
   <Still id="TokenerCover" component={TokenerCover} width={1920} height={1080} />
   <Composition id="TokenerFilm" component={TokenerFilm} durationInFrames={2700} fps={30} width={1920} height={1080} />
   <Composition id="TokenerFilmSubtitled" component={TokenerFilm} defaultProps={{ captions: true }} durationInFrames={2700} fps={30} width={1920} height={1080} />
-  <Composition
-    id="TokenerIntro"
-    component={TokenerIntro}
-    durationInFrames={150}
-    fps={30}
-    width={1920}
-    height={1080}
-  />
-  <Composition
-    id="TokenerReveal"
-    component={TokenerReveal}
-    durationInFrames={660}
-    fps={30}
-    width={1920}
-    height={1080}
-  />
   </>
 );
