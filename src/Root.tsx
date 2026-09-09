@@ -15,7 +15,6 @@ loadFont({ family: "Stack Sans Text", url: staticFile("fonts/stack-sans/StackSan
 export const RemotionRoot = () => (
   <>
   <Still id="TokenerCover" component={TokenerCover} width={1920} height={1080} />
-  <Composition id="TokenerFilm" component={TokenerFilm} defaultProps={{ captions: false, voiceover: false, music: false }} durationInFrames={2700} fps={30} width={1920} height={1080} />
-  <Composition id="TokenerFilmSubtitled" component={TokenerFilm} defaultProps={{ captions: true, voiceover: false, music: false }} durationInFrames={2700} fps={30} width={1920} height={1080} />
+  <Composition id="TokenerFilm" component={TokenerFilm} defaultProps={{ captions: false, voiceover: true, music: true }} durationInFrames={2700} fps={30} width={1920} height={1080} />
   </>
 );

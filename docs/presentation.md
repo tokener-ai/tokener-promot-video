@@ -1,6 +1,6 @@
 # Presentation script and Japanese captions
 
-Timing follows the 90-second silent film at normal speed. The Chinese presenter text is retained for the speaker; The bottom Japanese caption track is rendered by TokenerFilmSubtitled. All seven screen-recording scenes include gray Japanese subtitles beneath their titles. These scene subtitles are separate from the caption track below. Human review of meaning, Japanese phrasing and live delivery timing is still required. No voiceover has been recorded.
+Timing follows the 90-second web-capture film. The Chinese presenter text is retained for live narration; use `pnpm render --props='{"voiceover":false,"music":false}'` for a silent export. Japanese voiceover and background music are included by default. Enable the optional bottom caption track with `pnpm render --props='{"captions":true}'`. All seven web-capture scenes include gray Japanese subtitles beneath their titles, separate from the bottom caption track. Human review of meaning, Japanese phrasing and live delivery timing is still required.
 
 [Film](../exports/tokener-ifcon-preview.mp4)
 

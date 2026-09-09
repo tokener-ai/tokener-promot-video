@@ -2,7 +2,8 @@
 
 | Assets | Origin | Included terms |
 | --- | --- | --- |
-| Tokener lockup, mark, QR and demo recording | Tokener project assets | Brand and recording rights retained by their owner |
+| Tokener lockup, mark and QR | Tokener project assets | Brand rights retained by their owner |
+| Browser screenshots (`public/web-capture/`) | Captured from Tokener and Dify | Respective product rights remain with their owners |
 | Japanese voiceover (`public/audio/tokener-ja.wav`) | Owner-supplied ElevenLabs generation using Kana — Japanese Young Female | ElevenLabs service and voice terms apply |
 | Background music (`public/audio/tokener-bgm.m4a`) | Audio extracted from the owner-supplied `20260909-044509.mp4` | Source license not supplied |
 | Screen and closing watermarks, closing arrow | Tokener Landing Figma design, nodes 95:2763 and 99:4106 | Tokener brand rights retained by their owner |
