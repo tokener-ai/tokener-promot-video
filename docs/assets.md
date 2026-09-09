@@ -7,6 +7,6 @@
 | Model provider logos | Tokener provider catalog assets | Respective provider trademarks; no endorsement implied |
 | Coding-tool SVGs | [Lobe Icons](https://github.com/lobehub/lobe-icons) | [MIT license](../public/harnesses/LICENSE); trademarks remain with their owners |
 | Stack Sans Text | [Google Fonts](https://github.com/google/fonts/tree/main/ofl/stacksanstext) | [SIL Open Font License](../public/fonts/stack-sans/OFL.txt) |
-| Zen Kaku Gothic New | [Google Fonts](https://github.com/google/fonts/tree/main/ofl/zenkakugothicnew) | [SIL Open Font License](../public/fonts/zen-kaku-gothic-new/OFL.txt) |
+| MiSans Regular, Medium and Heavy | [Xiaomi MiSans](https://hyperos.mi.com/font/en/details/sc/) | [MiSans license agreement](https://hyperos.mi.com/font/en/download/); used for Chinese and Japanese text |
 
 The QR code links to https://tokener.ai. Dependencies are pinned in pnpm-lock.yaml and retain their own licenses. Remotion 4.0.522 ships its license in node_modules/remotion/LICENSE.md; review those terms for your organization before rendering commercially.

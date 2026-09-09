@@ -21,10 +21,18 @@ const Opening = () => {
   </AbsoluteFill>;
 };
 
-const Footage = ({ title, start, detail = false }: { title: string; start: number; detail?: boolean }) => <AbsoluteFill style={{ background: "#f5f5f7", padding: "54px 72px" }}>
-  <div style={{ fontSize: 68, fontWeight: 900, letterSpacing: -1, marginBottom: 30 }}>{title}</div>
-  <div style={{ position: "relative", width: 1776, height: 850, overflow: "hidden", background: "white" }}>
-    <Video src={staticFile("footage/tokener-screen.mp4")} trimBefore={start * 30} muted style={detail ? { position: "absolute", height: "100%", width: "100%", objectFit: "contain" } : { width: "100%", height: "100%", objectFit: "contain" }} />
+const Footage = ({ title, start, subtitle }: { title: string; start: number; subtitle?: string }) => <AbsoluteFill style={{ background: "#f5f5f7", padding: "40px 72px" }}>
+  <div style={{ height: 130 }}>
+    <div style={{ fontSize: 68, lineHeight: 1.15, fontWeight: 900, letterSpacing: -1 }}>{title}</div>
+    {subtitle && <div style={{ fontSize: 30, fontWeight: 400, color: "#74777c", marginTop: 12 }}>{subtitle}</div>}
+  </div>
+  <div style={{ width: 1600, alignSelf: "center", borderRadius: 16, overflow: "hidden", boxShadow: "0 12px 36px #10111216", border: "1px solid #dfe1e5" }}>
+    <div style={{ height: 42, background: "#e9ebee", display: "flex", alignItems: "center", gap: 10, paddingLeft: 20 }}>
+      <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#b5b9c0" }} />
+      <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#b5b9c0" }} />
+      <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#b5b9c0" }} />
+    </div>
+    <Video src={staticFile("footage/tokener-screen.mp4")} trimBefore={start * 30} muted style={{ display: "block", width: "100%", aspectRatio: "3840 / 1980" }} />
   </div>
 </AbsoluteFill>;
 
@@ -64,7 +72,7 @@ const Closing = () => <AbsoluteFill style={{ background: "#0033FF", color: "whit
   <Img src={staticFile("brand/logo-lockup.svg")} style={{ width: 600, filter: "brightness(0) invert(1)", marginBottom: 90 }} />
   <div style={{ fontSize: 64, fontWeight: 900, lineHeight: 1.65 }}>9月10日、日本向けサービス開始。<br />日本語サポート対応。</div>
   <div style={{ fontSize: 72, fontWeight: 900, marginTop: 65 }}>登録して、無料で試す。</div>
-  <div style={{ fontSize: 56, marginTop: 36 }}>tokener.ai</div>
+  <div style={{ fontSize: 56, marginTop: 36, fontFamily: "Stack Sans Text", fontWeight: 400 }}>tokener.ai</div>
   <div style={{ position: "absolute", right: 120, bottom: 120, background: "white", padding: 32 }}><Img src={staticFile("brand/tokener-qr.png")} style={{ width: 280, height: 280, imageRendering: "pixelated" }} /></div>
 </AbsoluteFill>;
 
@@ -75,7 +83,7 @@ const SceneFades = () => {
   return <AbsoluteFill style={{ background: "#101112", opacity, pointerEvents: "none" }} />;
 };
 
-export const TokenerFilm = () => <AbsoluteFill style={{ fontWeight: 500, fontFamily: '"Stack Sans Text", "Zen Kaku Gothic New", sans-serif', color: "#101112" }}>
+export const TokenerFilm = () => <AbsoluteFill style={{ fontWeight: 500, fontFamily: '"Stack Sans Text", "MiSans", sans-serif', color: "#101112" }}>
   <Sequence durationInFrames={360} name="Model fragmentation"><Opening /></Sequence>
   <Sequence from={360} durationInFrames={240} name="Brand reveal"><TokenerReveal /></Sequence>
   <Sequence from={600} durationInFrames={120} name="Public model catalog"><Footage title="主要モデルを、まとめて。" start={4} /></Sequence>
@@ -84,7 +92,7 @@ export const TokenerFilm = () => <AbsoluteFill style={{ fontWeight: 500, fontFam
   <Sequence from={1020} durationInFrames={60} name="Tokener to Dify"><DifyConnection /></Sequence>
   <Sequence from={1080} durationInFrames={120} name="Dify model provider"><Footage title="Difyにつないで、動かす。" start={38} /></Sequence>
   <Sequence from={1200} durationInFrames={360} name="Dify workflow"><Footage title="いつものワークフローで。" start={62} /></Sequence>
-  <Sequence from={1560} durationInFrames={330} name="Continuous translation output"><Footage title="アイデアを、実行へ。" start={76.5} detail /></Sequence>
+  <Sequence from={1560} durationInFrames={330} name="Continuous translation output"><Footage title="アイデアを、実行へ。" start={76.5} subtitle="翻訳、チェック、書き直し。" /></Sequence>
   <Sequence from={1890} durationInFrames={180} name="Usage and cost overview"><Footage title="利用も、コストも、一か所で。" start={12} /></Sequence>
   <Sequence from={2070} durationInFrames={150} name="Request usage">
     <Sequence durationInFrames={120}><Footage title="利用も、コストも、一か所で。" start={24} /></Sequence>

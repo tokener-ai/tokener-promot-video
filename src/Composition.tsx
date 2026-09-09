@@ -13,7 +13,7 @@ export const TokenerIntro = () => {
         backgroundColor: "white",
         justifyContent: "center",
         alignItems: "center",
-        fontFamily: "sans-serif",
+        fontFamily: '"Stack Sans Text", "MiSans", sans-serif',
         fontSize: 100,
       }}
     >

@@ -44,7 +44,7 @@ Timeline positions and durations use frames at 30 fps. Footage offsets use secon
 
 The render footage removes 180 pixels from the top of the 3840 × 2160 recording, retaining the bottom product navigation. The original recording is included unchanged. The owner confirmed that the displayed API key is a dummy demonstration value. Demo account and usage information remain visible.
 
-The additional captions in the script are proposed text, not burned into the film. Japanese copy needs human review before public presentation. Reconfirm date, price and trial claims before reusing this launch-specific film.
+The additional caption track in the script remains proposed; one line is used as a gray scene subtitle during the translation output. Japanese copy needs human review before public presentation. Reconfirm date, price and trial claims before reusing this launch-specific film.
 
 ## Rights and assets
 

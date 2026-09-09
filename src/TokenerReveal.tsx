@@ -16,7 +16,7 @@ export const TokenerReveal = ({ showNote = true }: { showNote?: boolean }) => {
   const catalog = f >= 240;
 
   return (
-    <AbsoluteFill style={{ background: catalog ? "#f5f5f7" : "#101112", color: catalog ? "#101112" : "white", fontWeight: 500, fontFamily: '"Stack Sans Text", "Zen Kaku Gothic New", sans-serif', overflow: "hidden" }}>
+    <AbsoluteFill style={{ background: catalog ? "#f5f5f7" : "#101112", color: catalog ? "#101112" : "white", fontWeight: 500, fontFamily: '"Stack Sans Text", "MiSans", sans-serif', overflow: "hidden" }}>
       {f < 85 && models.map((model, i) => {
         const x = (i % 3 - 1) * 560;
         const y = (Math.floor(i / 3) * 2 - 1) * 250;
@@ -25,7 +25,7 @@ export const TokenerReveal = ({ showNote = true }: { showNote?: boolean }) => {
       {f >= 72 && f < 147 && <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", fontSize: 112, fontWeight: 900, letterSpacing: -1, opacity: interpolate(f, [72, 80, 127, 147], [0, 1, 1, 0], clamp) }}>ひとつの入口へ。</AbsoluteFill>}
       {f >= 150 && f < 240 && <AbsoluteFill style={{ background: "#0033FF", justifyContent: "center", alignItems: "center", opacity: interpolate(f, [150, 155], [0, 1], clamp) }}>
         <Img src={staticFile("brand/logo-lockup.svg")} style={{ width: 850, filter: "brightness(0) invert(1)", scale: interpolate(f, [150, 185], [0.93, 1], clamp) }} />
-        <div style={{ position: "absolute", bottom: 205, fontSize: 36, letterSpacing: 5 }}>tokener.ai</div>
+        <div style={{ position: "absolute", bottom: 205, fontSize: 36, fontFamily: "Stack Sans Text", fontWeight: 400 }}>tokener.ai</div>
       </AbsoluteFill>}
       {catalog && <>
         <Img src={staticFile("brand/logo-lockup.svg")} style={{ position: "absolute", left: 120, top: 82, width: 240 }} />

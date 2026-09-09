@@ -6,8 +6,10 @@ import { TokenerReveal } from "./TokenerReveal";
 import { TokenerFilm } from "./TokenerFilm";
 import { TokenerCover } from "./TokenerCover";
 
-loadFont({ family: "Zen Kaku Gothic New", url: staticFile("fonts/zen-kaku-gothic-new/Medium.ttf"), weight: "500" });
-loadFont({ family: "Zen Kaku Gothic New", url: staticFile("fonts/zen-kaku-gothic-new/Black.ttf"), weight: "900" });
+loadFont({ family: "MiSans", url: staticFile("fonts/misans/MiSans-Regular.woff2"), weight: "400" });
+
+loadFont({ family: "MiSans", url: staticFile("fonts/misans/MiSans-Medium.woff2"), weight: "500" });
+loadFont({ family: "MiSans", url: staticFile("fonts/misans/MiSans-Heavy.woff2"), weight: "900" });
 
 loadFont({ family: "Stack Sans Text", url: staticFile("fonts/stack-sans/StackSansText.ttf"), weight: "300 700" });
 
