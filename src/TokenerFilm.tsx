@@ -64,12 +64,29 @@ const Harnesses = () => {
   </AbsoluteFill>;
 };
 
-const Closing = () => <AbsoluteFill style={{ background: "#0033FF", color: "white", padding: 120 }}>
-  <Img src={staticFile("brand/logo-lockup.svg")} style={{ width: 600, filter: "brightness(0) invert(1)", marginBottom: 90 }} />
-  <div style={{ fontSize: 64, fontWeight: 900, lineHeight: 1.65 }}>9月10日、日本向けサービス開始。<br />日本語サポート対応。</div>
-  <div style={{ fontSize: 72, fontWeight: 900, marginTop: 65 }}>登録して、無料で試す。</div>
-  <div style={{ fontSize: 56, marginTop: 36, fontFamily: "Stack Sans Text", fontWeight: 400 }}>tokener.ai</div>
-  <div style={{ position: "absolute", right: 120, bottom: 120, background: "white", padding: 32 }}><Img src={staticFile("brand/tokener-qr.png")} style={{ width: 280, height: 280, imageRendering: "pixelated" }} /></div>
+const Closing = () => <AbsoluteFill style={{ background: "#0033FF", color: "white" }}>
+  <Img src={staticFile("brand/closing-watermark.png")} style={{ position: "absolute", left: 640, top: 0, width: 1280, height: 821 }} />
+  <Img src={staticFile("brand/logo-lockup.svg")} style={{ position: "absolute", left: 120, top: 120, width: 553, filter: "brightness(0) invert(1)" }} />
+  <div style={{ position: "absolute", left: 120, top: 348, fontFamily: "MiSans" }}>
+    <div style={{ fontSize: 80, fontWeight: 600, lineHeight: "106px", letterSpacing: -1.6 }}>9月10日、日本向けサービス開始。</div>
+    <div style={{ fontSize: 56, fontWeight: 500, lineHeight: "74px", letterSpacing: -1.12, marginTop: 20 }}>日本語サポート対応</div>
+  </div>
+  <div style={{ position: "absolute", left: 120, top: 785 }}>
+    <div style={{ fontSize: 66, fontWeight: 600, lineHeight: "88px", letterSpacing: -1.32 }}>登録して、無料で試す。</div>
+    <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 20 }}>
+      <Img src={staticFile("brand/arrow-right-circle.svg")} style={{ width: 56, height: 56 }} />
+      <div style={{ fontSize: 56, lineHeight: "73px", letterSpacing: -1.12, fontFamily: "Stack Sans Text", fontWeight: 300 }}>tokener.ai</div>
+    </div>
+  </div>
+  <div style={{ position: "absolute", left: 1616, top: 776, background: "white", padding: 8 }}><Img src={staticFile("brand/tokener-qr.png")} style={{ display: "block", width: 184, height: 184, imageRendering: "pixelated" }} /></div>
+</AbsoluteFill>;
+
+const BrandEnding = () => <AbsoluteFill style={{ background: "#0033FF", color: "white", justifyContent: "center", alignItems: "center" }}>
+  <div style={{ display: "flex", alignItems: "center", gap: 48 }}>
+    <Img src={staticFile("brand/logo-mark.svg")} style={{ width: 180, height: 190, objectFit: "contain", filter: "brightness(0) invert(1)" }} />
+    <div style={{ fontFamily: "Stack Sans Text", fontSize: 200, lineHeight: 1, fontWeight: 400, letterSpacing: -6 }}>tokener.ai</div>
+  </div>
+  <div style={{ marginTop: 72, fontSize: 64, fontWeight: 600 }}>主要AIモデルを、ひとつの入口へ。</div>
 </AbsoluteFill>;
 
 const SceneFades = () => {
@@ -96,6 +113,7 @@ export const TokenerFilm = () => <AbsoluteFill style={{ fontWeight: 500, fontFam
   </Sequence>
   <Sequence from={2220} durationInFrames={240} name="Coding tools"><Harnesses /></Sequence>
   <Sequence from={2460} durationInFrames={300} name="Japan launch and registration"><Closing /></Sequence>
+  <Sequence from={2760} durationInFrames={90} name="Brand ending"><BrandEnding /></Sequence>
   <Sequence durationInFrames={45} name="Cover"><TokenerCover /></Sequence>
   <SceneFades />
 </AbsoluteFill>;

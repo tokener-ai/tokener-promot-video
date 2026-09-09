@@ -3,7 +3,7 @@
 | Assets | Origin | Included terms |
 | --- | --- | --- |
 | Tokener lockup, mark, QR and demo recording | Tokener project assets | Brand and recording rights retained by their owner |
-| Screenshot watermark | Tokener Landing Figma design, node 95:2763 | Tokener brand rights retained by their owner |
+| Screen and closing watermarks, closing arrow | Tokener Landing Figma design, nodes 95:2763 and 99:4106 | Tokener brand rights retained by their owner |
 | Dify logo | Dify project logo | Dify brand rights retained by its owner |
 | Model provider logos | Tokener provider catalog assets | Respective provider trademarks; no endorsement implied |
 | Coding-tool SVGs | [Lobe Icons](https://github.com/lobehub/lobe-icons) | [MIT license](../public/harnesses/LICENSE); trademarks remain with their owners |
