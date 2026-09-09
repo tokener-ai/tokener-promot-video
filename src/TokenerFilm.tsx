@@ -1,6 +1,7 @@
 import { Video } from "@remotion/media";
 import { AbsoluteFill, Freeze, Img, Sequence, interpolate, staticFile, useCurrentFrame } from "remotion";
 import { TokenerReveal } from "./TokenerReveal";
+import { FilmCaptions } from "./FilmCaptions";
 import { TokenerCover } from "./TokenerCover";
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
@@ -91,29 +92,30 @@ const BrandEnding = () => <AbsoluteFill style={{ background: "#0033FF", color: "
 
 const SceneFades = () => {
   const f = useCurrentFrame();
-  const cuts = [45, 360, 600, 720, 840, 1020, 1080, 1200, 1560, 1890, 2070, 2220, 2460];
+  const cuts = [45, 600, 960, 1740, 2310];
   const opacity = Math.max(...cuts.map((cut) => interpolate(f, [cut - 8, cut, cut + 10], [0, 1, 0], clamp)));
   return <AbsoluteFill style={{ background: "#101112", opacity, pointerEvents: "none" }} />;
 };
 
-export const TokenerFilm = () => <AbsoluteFill style={{ fontWeight: 500, fontFamily: '"Stack Sans Text", "MiSans", sans-serif', color: "#101112" }}>
+export const TokenerFilm = ({ captions = false }: { captions?: boolean }) => <AbsoluteFill style={{ fontWeight: 500, fontFamily: '"Stack Sans Text", "MiSans", sans-serif', color: "#101112" }}>
   <Sequence durationInFrames={360} name="Model fragmentation"><Opening /></Sequence>
   <Sequence from={360} durationInFrames={240} name="Brand reveal"><TokenerReveal /></Sequence>
   <Sequence from={600} durationInFrames={120} name="Public model catalog"><Footage title="主要モデルを、まとめて。" start={4} subtitle="各社のモデルを、ひとつの一覧で。" /></Sequence>
   <Sequence from={720} durationInFrames={120} name="Console model catalog"><Footage title="各社の公式価格で。" start={18} subtitle="モデルごとの料金を、その場で確認。" /></Sequence>
-  <Sequence from={840} durationInFrames={180} name="Model lineup"><Sequence from={-480}><TokenerReveal showNote={false} /></Sequence></Sequence>
-  <Sequence from={1020} durationInFrames={60} name="Tokener to Dify"><DifyConnection /></Sequence>
+  <Sequence from={840} durationInFrames={120} name="Model lineup"><Sequence from={-480}><TokenerReveal showNote={false} /></Sequence></Sequence>
+  <Sequence from={960} durationInFrames={120} name="Tokener to Dify"><DifyConnection /></Sequence>
   <Sequence from={1080} durationInFrames={120} name="Dify model provider"><Footage title="Difyにつないで、動かす。" start={38} subtitle="モデルプロバイダーに、Tokenerを追加。" /></Sequence>
-  <Sequence from={1200} durationInFrames={360} name="Dify workflow"><Footage title="いつものワークフローで。" start={62} subtitle="使いたいモデルを、ワークフローに。" /></Sequence>
-  <Sequence from={1560} durationInFrames={330} name="Continuous translation output"><Footage title="アイデアを、実行へ。" start={76.5} subtitle="翻訳、チェック、書き直し。" /></Sequence>
-  <Sequence from={1890} durationInFrames={180} name="Usage and cost overview"><Footage title="利用も、コストも、一か所で。" start={12} subtitle="利用量とコストを、まとめて確認。" /></Sequence>
-  <Sequence from={2070} durationInFrames={150} name="Request usage">
+  <Sequence from={1200} durationInFrames={210} name="Dify workflow"><Footage title="いつものワークフローで。" start={67} subtitle="使いたいモデルを、ワークフローに。" /></Sequence>
+  <Sequence from={1410} durationInFrames={330} name="Continuous translation output"><Footage title="アイデアを、実行へ。" start={76.5} subtitle="翻訳、チェック、書き直し。" /></Sequence>
+  <Sequence from={1740} durationInFrames={180} name="Usage and cost overview"><Footage title="利用も、コストも、一か所で。" start={12} subtitle="利用量とコストを、まとめて確認。" /></Sequence>
+  <Sequence from={1920} durationInFrames={150} name="Request usage">
     <Sequence durationInFrames={120}><Footage title="利用も、コストも、一か所で。" start={24} subtitle="リクエストごとの利用量とコストを確認。" /></Sequence>
     <Sequence from={120} durationInFrames={30}><Freeze frame={119}><Footage title="利用も、コストも、一か所で。" start={24} subtitle="リクエストごとの利用量とコストを確認。" /></Freeze></Sequence>
   </Sequence>
-  <Sequence from={2220} durationInFrames={240} name="Coding tools"><Harnesses /></Sequence>
-  <Sequence from={2460} durationInFrames={300} name="Japan launch and registration"><Closing /></Sequence>
-  <Sequence from={2760} durationInFrames={90} name="Brand ending"><BrandEnding /></Sequence>
+  <Sequence from={2070} durationInFrames={240} name="Coding tools"><Harnesses /></Sequence>
+  <Sequence from={2310} durationInFrames={300} name="Japan launch and registration"><Closing /></Sequence>
+  <Sequence from={2610} durationInFrames={90} name="Brand ending"><BrandEnding /></Sequence>
   <Sequence durationInFrames={45} name="Cover"><TokenerCover /></Sequence>
+  {captions && <FilmCaptions />}
   <SceneFades />
 </AbsoluteFill>;

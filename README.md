@@ -1,8 +1,8 @@
 # Tokener promotional video
 
-Editable Remotion project for the Tokener Japan launch presentation on September 10, 2026. The main film is 92 seconds, 1920 × 1080, 30 fps, with Japanese scene titles and no audio.
+Editable Remotion project for the Tokener Japan launch presentation on September 10, 2026. The main film is 90 seconds, 3840 × 2160, 30 fps, with Japanese scene titles and no audio.
 
-[Watch or download the film](exports/tokener-ifcon-preview.mp4) · [Cover](exports/tokener-cover.png) · [Presentation script and proposed captions](docs/presentation.md)
+[Film](exports/tokener-ifcon-preview.mp4) · [Japanese subtitles](exports/tokener-ifcon-4k-subtitled.mp4) · [Cover](exports/tokener-cover.png) · [Presentation script and captions](docs/presentation.md)
 
 ![Tokener cover](exports/tokener-cover.png)
 
@@ -25,7 +25,7 @@ pnpm render
 pnpm render:cover
 ```
 
-Exports are written to ignored `out/`. To reduce memory use, run `pnpm render --concurrency=4`. The checked-in `exports/` files are the shareable film and cover; regenerate and replace them after editing.
+Exports default to 4K through `remotion.config.ts`; compositions retain a 1920 × 1080 layout canvas and render at 2× scale. Exports are written to ignored `out/`. To reduce memory use, run `pnpm render --concurrency=4`. The checked-in `exports/` files are the shareable film and cover; regenerate and replace them after editing.
 
 ## Edit
 
@@ -44,8 +44,16 @@ Timeline positions and durations use frames at 30 fps. Footage offsets use secon
 
 The render footage removes 180 pixels from the top of the 3840 × 2160 recording, retaining the bottom product navigation. The original recording is included unchanged. The owner confirmed that the displayed API key is a dummy demonstration value. Demo account and usage information remain visible.
 
-The additional caption track in the script remains proposed; one line is used as a gray scene subtitle during the translation output. Japanese copy needs human review before public presentation. Reconfirm date, price and trial claims before reusing this launch-specific film.
+The optional bottom caption track follows the timing in the presentation script. Gray scene subtitles remain part of the underlying video. Japanese copy needs human review before public presentation. Reconfirm date, price and trial claims before reusing this launch-specific film.
 
 ## Rights and assets
 
 This repository retains `UNLICENSED` status; publication does not grant a general open-source license. Contact the repository owner for reuse permission. Third-party fonts and icons retain their own licenses; see [asset attribution](docs/assets.md). Remotion use is governed by its own license.
+
+## Japanese subtitles
+
+`TokenerFilmSubtitled` overlays the Japanese caption track from `src/captions.ja.json` without changing the underlying scenes. `TokenerFilm` remains available without the bottom captions.
+
+```sh
+pnpm exec remotion render src/index.ts TokenerFilmSubtitled out/tokener-ifcon-4k-subtitled.mp4 --concurrency=4 --muted
+```

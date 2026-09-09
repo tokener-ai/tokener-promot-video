@@ -1,0 +1,128 @@
+[
+  {
+    "text": "AIモデルの選択肢は、増え続けています。",
+    "startMs": 1500,
+    "endMs": 5200,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "サービスごとに増える接続設定。",
+    "startMs": 5200,
+    "endMs": 8500,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "残高も、利用状況も、別々の場所に。",
+    "startMs": 8500,
+    "endMs": 12000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "モデルへのアクセスを、ひとつに。",
+    "startMs": 15000,
+    "endMs": 20000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "主要なAIモデルを、ひとつの窓口から。",
+    "startMs": 20000,
+    "endMs": 24000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "モデルと価格を、一覧で確認できます。",
+    "startMs": 24000,
+    "endMs": 28000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "各モデル提供元の公式価格で利用できます。",
+    "startMs": 28000,
+    "endMs": 32000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Difyに接続し、使いたいモデルを選択。",
+    "startMs": 36000,
+    "endMs": 40000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "いつものワークフローで使い始められます。",
+    "startMs": 40000,
+    "endMs": 44000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "複数のモデルで、翻訳の各ステップを実行。",
+    "startMs": 44000,
+    "endMs": 47000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "翻訳、チェック、書き直し。",
+    "startMs": 47000,
+    "endMs": 52000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ワークフローを実行し、結果を確認。",
+    "startMs": 52000,
+    "endMs": 58000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "モデルごとの利用量とコストを、一か所で。",
+    "startMs": 58000,
+    "endMs": 64000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "リクエストごとの利用量とコストも確認できます。",
+    "startMs": 64000,
+    "endMs": 69000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Claude CodeやCodexなど、",
+    "startMs": 69000,
+    "endMs": 73000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "いつものAI開発ツールにも接続できます。",
+    "startMs": 73000,
+    "endMs": 77000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "9月10日、日本向けにサービス開始。",
+    "startMs": 77000,
+    "endMs": 82000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "日本語サポート対応。登録して、無料でお試しください。",
+    "startMs": 82000,
+    "endMs": 87000,
+    "timestampMs": null,
+    "confidence": null
+  }
+]
