@@ -39,7 +39,7 @@ Exports default to 4K through `remotion.config.ts`; compositions retain a 1920 Ã
 
 The `voiceover` and `captions` composition props are independent booleans. Commands targeting the same output path overwrite that file.
 
-Background music is optional and off by default. Use `pnpm render --props='{"voiceover":true,"music":true}'` for narration with music, or `pnpm render --props='{"music":true}'` for music alone. The music uses its first 90 seconds at 8% volume, with a one-second fade-in and three-second fade-out.
+Background music is optional and off by default. Use `pnpm render --props='{"voiceover":true,"music":true}'` for narration with music, or `pnpm render --props='{"music":true}'` for music alone. The music uses its first 90 seconds at 9% volume, with a one-second fade-in and three-second fade-out.
 
 `render:audio` copies the aligned source WAV to `out/tokener-ja.wav` without re-encoding.
 
