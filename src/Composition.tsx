@@ -1,25 +1,23 @@
-import { CalculateMetadataFunction, Composition } from "remotion";
+import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 
-type Props = {};
+export const TokenerIntro = () => {
+  const frame = useCurrentFrame();
+  const opacity = interpolate(frame, [0, 30], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
 
-const calculateMetadata: CalculateMetadataFunction<Props> = () => {
-  return {};
-};
-
-export const MyComposition = () => {
   return (
-    <Composition
-      id="MyComp"
-      component={MyComponent}
-      durationInFrames={60}
-      fps={30}
-      width={1280}
-      height={720}
-      calculateMetadata={calculateMetadata}
-    />
+    <AbsoluteFill
+      style={{
+        backgroundColor: "white",
+        justifyContent: "center",
+        alignItems: "center",
+        fontFamily: "sans-serif",
+        fontSize: 100,
+      }}
+    >
+      <div style={{ opacity }}>Tokener.ai</div>
+    </AbsoluteFill>
   );
-};
-
-export const MyComponent: React.FC<Props> = () => {
-  return null;
 };

@@ -1,0 +1,2 @@
+.agents/** -whitespace
+public/fonts/**/OFL.txt -whitespace
