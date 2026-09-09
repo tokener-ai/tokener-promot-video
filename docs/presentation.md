@@ -1,6 +1,6 @@
 # Presentation script and proposed Japanese captions
 
-Timing follows the 92-second silent film at normal speed. The Chinese presenter text is retained for the speaker; The Japanese caption track remains proposed. The line「翻訳、チェック、書き直し。」is used as a gray scene subtitle at 00:52–01:03. Human review of meaning, Japanese phrasing and live delivery timing is still required. No voiceover has been recorded.
+Timing follows the 92-second silent film at normal speed. The Chinese presenter text is retained for the speaker; The Japanese caption track remains proposed. All seven screen-recording scenes include gray Japanese subtitles beneath their titles. These scene subtitles are separate from the proposed caption track below. Human review of meaning, Japanese phrasing and live delivery timing is still required. No voiceover has been recorded.
 
 [Film](../exports/tokener-ifcon-preview.mp4)
 

@@ -9,6 +9,7 @@ import { TokenerCover } from "./TokenerCover";
 loadFont({ family: "MiSans", url: staticFile("fonts/misans/MiSans-Regular.woff2"), weight: "400" });
 
 loadFont({ family: "MiSans", url: staticFile("fonts/misans/MiSans-Medium.woff2"), weight: "500" });
+loadFont({ family: "MiSans", url: staticFile("fonts/misans/MiSans-Semibold.woff2"), weight: "600" });
 loadFont({ family: "MiSans", url: staticFile("fonts/misans/MiSans-Heavy.woff2"), weight: "900" });
 
 loadFont({ family: "Stack Sans Text", url: staticFile("fonts/stack-sans/StackSansText.ttf"), weight: "300 700" });

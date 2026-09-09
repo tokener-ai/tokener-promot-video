@@ -21,17 +21,13 @@ const Opening = () => {
   </AbsoluteFill>;
 };
 
-const Footage = ({ title, start, subtitle }: { title: string; start: number; subtitle?: string }) => <AbsoluteFill style={{ background: "#f5f5f7", padding: "40px 72px" }}>
-  <div style={{ height: 130 }}>
-    <div style={{ fontSize: 68, lineHeight: 1.15, fontWeight: 900, letterSpacing: -1 }}>{title}</div>
-    {subtitle && <div style={{ fontSize: 30, fontWeight: 400, color: "#74777c", marginTop: 12 }}>{subtitle}</div>}
+const Footage = ({ title, start, subtitle }: { title: string; start: number; subtitle: string }) => <AbsoluteFill style={{ background: "#f5f5f5", overflow: "hidden" }}>
+  <Img src={staticFile("brand/screen-watermark.png")} style={{ position: "absolute", left: 640, top: 0, width: 1280, height: 821 }} />
+  <div style={{ position: "absolute", left: 64, top: 32 }}>
+    <div style={{ fontSize: 50, lineHeight: "66px", fontWeight: 600, letterSpacing: -1 }}>{title}</div>
+    <div style={{ fontSize: 20, lineHeight: "24px", fontWeight: 400, color: "#0009", marginTop: 10 }}>{subtitle}</div>
   </div>
-  <div style={{ width: 1600, alignSelf: "center", borderRadius: 16, overflow: "hidden", boxShadow: "0 12px 36px #10111216", border: "1px solid #dfe1e5" }}>
-    <div style={{ height: 42, background: "#e9ebee", display: "flex", alignItems: "center", gap: 10, paddingLeft: 20 }}>
-      <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#b5b9c0" }} />
-      <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#b5b9c0" }} />
-      <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#b5b9c0" }} />
-    </div>
+  <div style={{ position: "absolute", left: 64, top: 157, width: 1792, borderRadius: "16px 16px 0 0", overflow: "hidden", boxShadow: "0 20px 24px -4px #09090b14, 0 8px 8px -4px #09090b08", border: "5px solid white", borderBottom: 0 }}>
     <Video src={staticFile("footage/tokener-screen.mp4")} trimBefore={start * 30} muted style={{ display: "block", width: "100%", aspectRatio: "3840 / 1980" }} />
   </div>
 </AbsoluteFill>;
@@ -86,17 +82,17 @@ const SceneFades = () => {
 export const TokenerFilm = () => <AbsoluteFill style={{ fontWeight: 500, fontFamily: '"Stack Sans Text", "MiSans", sans-serif', color: "#101112" }}>
   <Sequence durationInFrames={360} name="Model fragmentation"><Opening /></Sequence>
   <Sequence from={360} durationInFrames={240} name="Brand reveal"><TokenerReveal /></Sequence>
-  <Sequence from={600} durationInFrames={120} name="Public model catalog"><Footage title="主要モデルを、まとめて。" start={4} /></Sequence>
-  <Sequence from={720} durationInFrames={120} name="Console model catalog"><Footage title="各社の公式価格で。" start={18} /></Sequence>
+  <Sequence from={600} durationInFrames={120} name="Public model catalog"><Footage title="主要モデルを、まとめて。" start={4} subtitle="各社のモデルを、ひとつの一覧で。" /></Sequence>
+  <Sequence from={720} durationInFrames={120} name="Console model catalog"><Footage title="各社の公式価格で。" start={18} subtitle="モデルごとの料金を、その場で確認。" /></Sequence>
   <Sequence from={840} durationInFrames={180} name="Model lineup"><Sequence from={-480}><TokenerReveal showNote={false} /></Sequence></Sequence>
   <Sequence from={1020} durationInFrames={60} name="Tokener to Dify"><DifyConnection /></Sequence>
-  <Sequence from={1080} durationInFrames={120} name="Dify model provider"><Footage title="Difyにつないで、動かす。" start={38} /></Sequence>
-  <Sequence from={1200} durationInFrames={360} name="Dify workflow"><Footage title="いつものワークフローで。" start={62} /></Sequence>
+  <Sequence from={1080} durationInFrames={120} name="Dify model provider"><Footage title="Difyにつないで、動かす。" start={38} subtitle="モデルプロバイダーに、Tokenerを追加。" /></Sequence>
+  <Sequence from={1200} durationInFrames={360} name="Dify workflow"><Footage title="いつものワークフローで。" start={62} subtitle="使いたいモデルを、ワークフローに。" /></Sequence>
   <Sequence from={1560} durationInFrames={330} name="Continuous translation output"><Footage title="アイデアを、実行へ。" start={76.5} subtitle="翻訳、チェック、書き直し。" /></Sequence>
-  <Sequence from={1890} durationInFrames={180} name="Usage and cost overview"><Footage title="利用も、コストも、一か所で。" start={12} /></Sequence>
+  <Sequence from={1890} durationInFrames={180} name="Usage and cost overview"><Footage title="利用も、コストも、一か所で。" start={12} subtitle="利用量とコストを、まとめて確認。" /></Sequence>
   <Sequence from={2070} durationInFrames={150} name="Request usage">
-    <Sequence durationInFrames={120}><Footage title="利用も、コストも、一か所で。" start={24} /></Sequence>
-    <Sequence from={120} durationInFrames={30}><Freeze frame={119}><Footage title="利用も、コストも、一か所で。" start={24} /></Freeze></Sequence>
+    <Sequence durationInFrames={120}><Footage title="利用も、コストも、一か所で。" start={24} subtitle="リクエストごとの利用量とコストを確認。" /></Sequence>
+    <Sequence from={120} durationInFrames={30}><Freeze frame={119}><Footage title="利用も、コストも、一か所で。" start={24} subtitle="リクエストごとの利用量とコストを確認。" /></Freeze></Sequence>
   </Sequence>
   <Sequence from={2220} durationInFrames={240} name="Coding tools"><Harnesses /></Sequence>
   <Sequence from={2460} durationInFrames={300} name="Japan launch and registration"><Closing /></Sequence>
