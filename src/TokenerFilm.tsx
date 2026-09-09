@@ -1,4 +1,4 @@
-import { Video } from "@remotion/media";
+import { Audio, Video } from "@remotion/media";
 import { AbsoluteFill, Freeze, Img, Sequence, interpolate, staticFile, useCurrentFrame } from "remotion";
 import { TokenerReveal } from "./TokenerReveal";
 import { FilmCaptions } from "./FilmCaptions";
@@ -97,7 +97,9 @@ const SceneFades = () => {
   return <AbsoluteFill style={{ background: "#101112", opacity, pointerEvents: "none" }} />;
 };
 
-export const TokenerFilm = ({ captions = false }: { captions?: boolean }) => <AbsoluteFill style={{ fontWeight: 500, fontFamily: '"Stack Sans Text", "MiSans", sans-serif', color: "#101112" }}>
+export const TokenerFilm = ({ captions = false, voiceover = false, music = false }: { captions?: boolean; voiceover?: boolean; music?: boolean }) => <AbsoluteFill style={{ fontWeight: 500, fontFamily: '"Stack Sans Text", "MiSans", sans-serif', color: "#101112" }}>
+  {voiceover && <Audio src={staticFile("audio/tokener-ja.wav")} />}
+  {music && <Audio src={staticFile("audio/tokener-bgm.m4a")} trimAfter={2700} volume={(f) => interpolate(f, [0, 30, 2610, 2700], [0, 0.08, 0.08, 0], clamp)} />}
   <Sequence durationInFrames={360} name="Model fragmentation"><Opening /></Sequence>
   <Sequence from={360} durationInFrames={240} name="Brand reveal"><TokenerReveal /></Sequence>
   <Sequence from={600} durationInFrames={120} name="Public model catalog"><Footage title="主要モデルを、まとめて。" start={4} subtitle="各社のモデルを、ひとつの一覧で。" /></Sequence>

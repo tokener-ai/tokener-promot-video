@@ -25,7 +25,9 @@
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc",
-    "render": "remotion render src/index.ts TokenerFilm out/tokener-ifcon-preview.mp4 --muted",
+    "render": "remotion render src/index.ts TokenerFilm out/tokener-ifcon-preview.mp4",
+    "render:subtitled": "remotion render src/index.ts TokenerFilmSubtitled out/tokener-ifcon-4k-subtitled.mp4",
+    "render:audio": "mkdir -p out && cp public/audio/tokener-ja.wav out/tokener-ja.wav",
     "render:cover": "remotion still src/index.ts TokenerCover out/tokener-cover.png"
   },
   "sideEffects": [
